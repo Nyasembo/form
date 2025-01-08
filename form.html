@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styleS.css">
+</head>
+<body class="body">
+    <header>
+        <h1 id="main-heading">User Registration Form</h1>
+    </header>
+    <div class="Registration-intro">
+        <h2>Welcome!</h2>
+        <p>Please fill out the form below to create your account.
+            By registering , you gain access to our exclusive 
+            features and resources. We respect your privacy and will
+            keep your information secure.</p>
+            <form id="RegistrationForm" method="post" action="SUBMIT">
+                <fieldset>
+                    <legend>Personal information</legend>
+
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName"
+                    required>
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName"
+                    required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                    required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}"
+                    title="Password must contain atleast one uppercase 
+                    letter, one lowercase letter, one digit and be 
+                    atleast 8 characters long."
+                    required>
+                </fieldset>
+                <fieldset>
+
+                    <legend>Account Type</legend>
+                    <label><input type="radio" name="accountType" value="Personal"
+                        required> Personal Account</label>
+                        <label><input type="radio" name="accountType" value="business"
+                            required>Business Account</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Details></legend>
+
+                    <label for="profilePic">Upload Profile Picture</label>
+                    <input type="file" id="profilePic" name="profilePic"
+                    accept="image/*">
+
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="18" max="120"
+                    required>
+
+                    <label for="referrer">How did you hear about us?</label>
+
+                    <select id="referrer" name="referrer">
+                        <option value="friend">Friend</option>
+                        <option value="onlineSearch">Online Search</option>
+                        <option value="socialMedia">Social Media</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="bio">Tell us about yourself:</label>
+                    <textarea id="bio" name="bio" rows="4" cols="50"
+                    placeholder="Write a short bio hear....."></textarea>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <optgroup label="South America">
+                            <option value="usa">United States</option>
+                            <option value="canada">Canada</option>
+                            <option value="mexico">Mexico</option>
+                        </optgroup>
+
+                        <optgroup label="Europe">
+                            <option value="uk"> United Kingdom</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                        </optgroup>
+
+                        <optgroup label="Asia">
+                            <option value="china">China</option>
+                            <option value="japan">Japan</option>
+                            <option value="india">India</option>
+                        </optgroup>
+                        
+                    </select>
+                </fieldset>
+                </fieldset>
+                <label><input type="checkbox" name="items" required>
+                    I accept the <a href="terms.html" target="_blank">terms and conditions</a>
+
+                </label>
+                <button type="submit">Register</button>
+
+                
+
+
+                </label>
+
+            </form>
+    </div>
+    
+</body>
+</html>
